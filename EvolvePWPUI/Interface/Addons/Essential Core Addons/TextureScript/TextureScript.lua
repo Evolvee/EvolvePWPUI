@@ -915,6 +915,103 @@ texture:SetAlpha(0)
 texture = HelpMicroButton:GetHighlightTexture()
 texture:SetAlpha(0)
 
+--Class-coloured nameplates
+
+local plated = CreateFrame("Frame", "TextureScript", UIParent)
+
+local healthBar, castBar
+local overlayRegion, castBarOverlayRegion, spellIconRegion, highlightRegion, nameTextRegion, bossIconRegion, levelTextRegion, raidIconRegion
+local lastUpdate = 0
+local longUpdate = 0
+local frame
+local name, class, classL
+
+local classes = {}
+local rgb = {}
+for k, v in pairs(RAID_CLASS_COLORS) do
+	rgb[k] = { v.r, v.g, v.b }
+end
+
+local function IsNameplate(frame)
+	if frame:GetName() then return false end
+
+	overlayRegion = frame:GetRegions()
+	if not overlayRegion or overlayRegion:GetObjectType() ~= "Texture" or overlayRegion:GetTexture() ~= "Interface\\Tooltips\\Nameplate-Border" then
+		return false
+	end
+	return frame:GetChildren()
+end
+
+
+local function ColorNameplate(frame)
+	healthBar, castBar = frame:GetChildren()
+	overlayRegion, castBarOverlayRegion, spellIconRegion, highlightRegion, nameTextRegion, levelTextRegion, bossIconRegion, raidIconRegion = frame:GetRegions()
+	
+	name = nameTextRegion:GetText()
+	if name and classes[name] then
+		healthBar:SetStatusBarColor(unpack(rgb[classes[name]]))
+	end
+end
+
+local function OnUpdate(self, elapsed)
+	lastUpdate = lastUpdate + elapsed
+	longUpdate = longUpdate + elapsed
+	
+	if lastUpdate > .1 then
+		lastUpdate = 0
+		for i = 1, select("#", WorldFrame:GetChildren()) do
+			frame = select(i, WorldFrame:GetChildren())
+    		if IsNameplate(frame) then ColorNameplate(frame) end
+		end  
+	end
+	
+	if longUpdate > 15 then
+		longUpdate = 0
+		if MiniMapBattlefieldFrame.status == "active" then RequestBattlefieldScoreData() end
+	end
+end
+
+local function OnEvent(self, event, ...)
+	if self[event] then self[event]() end
+end
+
+plated:SetScript("OnUpdate", OnUpdate)
+plated:SetScript("OnEvent", OnEvent)
+
+plated:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
+plated:RegisterEvent("PLAYER_TARGET_CHANGED")
+plated:RegisterEvent("UPDATE_BATTLEFIELD_SCORE")
+
+local function AddName(name, class)
+	if not class or not name then return end
+	if class == "UNKNOWN" or not RAID_CLASS_COLORS[class] then return end
+	classes[name] = class
+end
+
+function plated:UPDATE_MOUSEOVER_UNIT()
+	if UnitIsPlayer("mouseover") then
+		classL, class = UnitClass("mouseover")
+		name = UnitName("mouseover")
+		AddName(name, class)
+	end
+end
+
+function plated:PLAYER_TARGET_CHANGED()
+	if UnitIsPlayer("target") then
+		classL, class = UnitClass("target")
+		name = UnitName("target")
+		AddName(name, class)
+	end
+end
+
+function plated:UPDATE_BATTLEFIELD_SCORE()
+	for i = 1, GetNumBattlefieldScores() do
+		local name, _, _, _, _, _, _, _, _, class = GetBattlefieldScore(i)
+		name = ("-"):split(name, 2)
+		AddName(name, class)
+	end
+end
+
 
 --whisper on login informing this UI was properly loaded
 
