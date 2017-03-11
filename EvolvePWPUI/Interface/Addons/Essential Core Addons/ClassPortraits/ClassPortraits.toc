@@ -1,0 +1,5 @@
+## Interface: 30000
+## Title: ClassPortraits
+## Notes: Clown Fiesta
+## Author: Original addon backported by Schaka, ART + PlayerFrame EDITED BY EVOLVE, LFG/Inspect/Socials edited by Pyralis
+ClassPortraits.lua

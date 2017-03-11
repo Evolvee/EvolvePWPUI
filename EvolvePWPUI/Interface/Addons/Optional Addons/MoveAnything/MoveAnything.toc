@@ -1,0 +1,14 @@
+## Interface: 20000  
+## Title: MoveAnything!
+## Notes: version V-2.66
+## Author: Skrag - Mod by Jason - Mod for BC/2.0 by Vincent
+## Notes: Beta / LifeSupport for this little gem
+## SavedVariables: MoveAnything_CustomFrames, MoveAnything_CharacterSettings, MoveAnything_UseCharacterSettings
+## OptionalDeps: myAddOns, MCP, Ace2
+
+libs\AceLibrary\AceLibrary.lua
+libs\AceOO-2.0\AceOO-2.0.lua
+libs\AceEvent-2.0\AceEvent-2.0.lua
+libs\AceAddon-2.0\AceAddon-2.0.lua
+
+MoveAnything.xml

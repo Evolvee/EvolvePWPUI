@@ -1,0 +1,30 @@
+## Interface: 20400
+## Title: SpeedyActions |cff8080ffTBC|r
+## Notes: Speeds up triggering actions such as items or spells by triggering them on key/mouse down rather than release
+## Author: Shadowed, humfras
+## Version: 4
+
+## OptionalDeps: Ace3
+
+## SavedVariables: SpeedyActionsDB
+
+
+libs\humfras_tools.lua
+libs\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+libs\AceDB-3.0\AceDB-3.0.xml
+libs\AceGUI-3.0\AceGUI-3.0.xml
+libs\AceConfig-3.0\AceConfig-3.0.xml
+
+localization.enUS.lua
+Bindings.xml
+SpeedyActions.lua
+
+support\Bartender3.lua
+support\Bartender4.lua
+support\Bongos_AB.lua
+support\Clique.lua
+support\Dominos.lua
+support\Lunarsphere.lua
+
+config.lua

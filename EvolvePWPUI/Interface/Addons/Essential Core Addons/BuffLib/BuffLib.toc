@@ -1,0 +1,11 @@
+## Interface: 20400
+## Title: BuffLib
+## Author: Schaka
+## Notes: Adds several durations to UnitBuff and UnitDebuff
+## SavedVariables: BuffLibDB
+
+libs\LibStub\LibStub.lua
+libs\DRData-1.0\DRData-1.0.xml
+libs\LibSimpleOptions-1.0\lib.xml
+
+BuffLib.lua

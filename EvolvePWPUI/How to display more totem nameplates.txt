@@ -1,0 +1,2 @@
+Default version of this addon has only Tremor Totem nameplate displayed.
+If you want to display more totem nameplates(magma/grounding etc), remove their name from the list of ["Shits"] table.

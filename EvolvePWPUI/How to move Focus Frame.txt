@@ -1,0 +1,13 @@
+IN ORDER TO MOVE YOUR FOCUS FRAME AT 1st LAUNCH, TYPE:
+
+
+/script FocusFrameTitle:Show()
+
+and
+
+
+/FocusFrame unlock
+
+
+
+It is currently Hidden due to aim for maximal smoothness of Evolve PWP UI.

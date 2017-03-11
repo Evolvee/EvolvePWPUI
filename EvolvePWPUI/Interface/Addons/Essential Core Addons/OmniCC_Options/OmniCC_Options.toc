@@ -1,0 +1,8 @@
+## Interface: 20400
+## Title: OmniCC Options
+## Notes: A load on demand option menu for OmniCC
+## Author: Tuller
+## Dependencies: OmniCC
+## LoadOnDemand: 1
+localization.lua
+menu.lua

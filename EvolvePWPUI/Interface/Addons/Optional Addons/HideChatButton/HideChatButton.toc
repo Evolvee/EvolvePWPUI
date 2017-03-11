@@ -1,0 +1,6 @@
+## Interface: 30000
+## Author: Phemior, Backported by Evolve
+## Notes: This shit was so fucking bugged, I spent like 6 hours fixing it.
+## Title: HideChatButton
+## SavedVariablesPerCharacter: HCBxpos, HCBypos, HCBkeyable, HCBuseralpha
+HideChatButton.lua

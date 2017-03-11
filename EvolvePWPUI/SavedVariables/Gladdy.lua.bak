@@ -1,0 +1,29 @@
+
+GladdyXZ = {
+	["profileKeys"] = {
+		["Evolveisback - Smolderforge"] = "Evolve UNIVERSAL",
+	},
+	["profiles"] = {
+		["Evolveisback - Smolderforge"] = {
+			["y"] = 458.7889099121094,
+			["x"] = 4.722263813018799,
+		},
+		["Evolve UNIVERSAL"] = {
+			["powerBarFontSize"] = 6.895883560180664,
+			["y"] = 460.2110900878906,
+			["x"] = 134.8556518554688,
+			["healthBarHeight"] = 34,
+			["powerMax"] = false,
+			["castBarTexture"] = "Blizzard",
+			["powerActual"] = false,
+			["announcements"] = {
+				["spec"] = true,
+				["enemy"] = true,
+				["dest"] = "party",
+			},
+			["castBarFontSize"] = 8.965153694152832,
+			["powerBarHeight"] = 10,
+			["castBarHeight"] = 10,
+		},
+	},
+}

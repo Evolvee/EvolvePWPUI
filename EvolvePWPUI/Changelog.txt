@@ -1,0 +1,27 @@
+v2.0 - 1st STABLE RELEASE
+
+7.8.2016 - Edited ReadMe - Table of Contents.pdf + Added marks inside TextureScript.lua(EvolvePWPUI major addon) in order to give you an option to delete features you dont want.
+
+13.8.2016 - Removed flashy-highlights on mouseover from Action-Bar Buttons - Remove your current TextureScript.lua and Copy the current TextureScript.lua file in order to have this updated.
+
+15.8.2016 - Updated Gladdy (DR system)
+
+19.8.2016 - Updated Gladdy (optimalized + added options to disable features + custom-skin edited Gladdy to match EvolvePWPUI), Added SavedVariable Gladdy files into "SavedVariable" folder. - Copy and replace your current Gladdy folder + copy Gladdy SavedVariable files in order to have my exact settings, then press /gladdy ui --> profiles --> Copy From: Evolvepwp - Looking4group
+
+23.8.2016 - Updated TextureScript.lua - Deleted useless totem names - Remove your current TextureScript.lua and Copy the current TextureScript.lua in order to have this updated.
+
+29.8.2016 - Updated ReadMe - Table of Contents.pdf + Updated TextureScript.lua - minimap position - you dont need minimap addon enabled anymore - Remove your current TextureScript.lua and Copy the current TextureScript.lua in order to have this updated. If you dont want this minimap position, delete or change the "MinimapCluster:SetPoint" value at the bottom of TextureScript.lua
+
+9.9.2016- Updated TextureScript.lua - Moved Improved Error Frame command that hides the button on bottom of the file. This will solve an issue where the UI didnt load fully when you had the Improved Error Frame disabled. - Remove your current TextureScript.lua and Copy the current TextureScript.lua in order to have this updated.
+
+24.11.2016 - Updated TextureScript.lua - Pets HP and Mana values are now in their EXACT form rather than in X/Y form. + Added new "How to change PlayerPortrait image.txt" into the folder. - Remove your current TextureScript.lua and Copy the current TextureScript.lua in order to have this updated.
+
+
+v2.2 - 11.3.2017
+Updated whole interface.
+Made new PetFrame textures.
+Updated PetFrame HP + Mana bar and font/text sizing.
+Updated FocusFrame "RED FOCUS" circle.
+Updated ReadMe - Table of Contents
+
+If you want to update your UI with this version, you should download the UI and copy and paste whole Interface Folder and SavedVariables from scratch.

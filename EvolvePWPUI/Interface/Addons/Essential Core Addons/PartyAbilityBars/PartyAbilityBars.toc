@@ -1,0 +1,12 @@
+## Interface: 24300
+## Author: Schaka
+## Title: Party Ability Bars
+## SavedVariables: PABDB
+## X-Curse-Packaged-Version: 1.12
+## X-Curse-Project-Name: PartyAbilityBars
+## X-Curse-Project-ID: pab
+
+libs\LibStub\LibStub.lua
+libs\LibSimpleOptions-1.0\lib.xml
+
+PartyAbilityBars.lua

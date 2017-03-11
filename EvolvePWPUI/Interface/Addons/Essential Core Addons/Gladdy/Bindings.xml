@@ -1,0 +1,17 @@
+<Bindings>
+    <Binding name="GLADDYBUTTON1_LEFT" header="GLADDY"/>
+    <Binding name="GLADDYBUTTON2_LEFT"/>
+    <Binding name="GLADDYBUTTON3_LEFT"/>
+    <Binding name="GLADDYBUTTON4_LEFT"/>
+    <Binding name="GLADDYBUTTON5_LEFT"/>
+    <Binding name="GLADDYBUTTON1_RIGHT"/>
+    <Binding name="GLADDYBUTTON2_RIGHT"/>
+    <Binding name="GLADDYBUTTON3_RIGHT"/>
+    <Binding name="GLADDYBUTTON4_RIGHT"/>
+    <Binding name="GLADDYBUTTON5_RIGHT"/>
+	<Binding header="GLADDY" name="GLADDYTRINKET1" />
+	<Binding name="GLADDYTRINKET2" />
+	<Binding name="GLADDYTRINKET3" />
+	<Binding name="GLADDYTRINKET4" />
+	<Binding name="GLADDYTRINKET5" />
+</Bindings>

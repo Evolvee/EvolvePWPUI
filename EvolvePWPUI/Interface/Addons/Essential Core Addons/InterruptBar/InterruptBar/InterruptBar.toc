@@ -1,0 +1,10 @@
+## Interface: 20400
+## Title: Interrupt Bar
+## Notes: Tracks interrupts
+## Notes-koKR: 취소 주문을 추적합니다. /ib
+## Version: 1.14
+## Author: Kollektiv
+## DefaultState: Enabled
+## SavedVariables: InterruptBarDB
+
+InterruptBar.lua

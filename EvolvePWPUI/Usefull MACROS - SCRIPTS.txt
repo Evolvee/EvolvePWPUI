@@ -1,0 +1,88 @@
+Usefull macros / Optional scripts to add into TextureScript.lua or execute ingame:
+
+Learn all available spells at trainers automatically
+/run LoadAddOn"Blizzard_TrainerUI" f=ClassTrainerTrainButton f.e = 0 if f:GetScript"OnUpdate" then f:SetScript("OnUpdate", nil)else f:SetScript("OnUpdate", function(f,e) f.e=f.e+e if f.e>.01 then f.e=0 f:Click() end end)end
+
+
+Loot all items from mailbox
+/script CheckInbox() for m = GetInboxNumItems(), 1, -1 do TakeInboxItem( m ) end
+
+
+Loot all golds from mailbox
+/script CheckInbox() for m = GetInboxNumItems(), 1, -1 do TakeInboxMoney( m ) end
+
+
+Sells all gray items at vendor automatically
+/script for bag = 0, 4 do for slot = 1, GetContainerNumSlots(bag) do local name = GetContainerItemLink(bag,slot) if name and string.find(name,"ff9d9d9d") then DEFAULT_CHAT_FRAME:AddMessage("Selling "..name) UseContainerItem(bag,slot) end end end
+
+
+
+Buy ARENA-WATER without clicking on accept - "XXX" is the number of "Star Tears" you want to buy
+/run for i=1,GetMerchantNumItems() do local l=GetMerchantItemLink(i) if l then if l:find("Star's Tears") then BuyMerchantItem(i, XXX)end end end
+
+
+
+Fake amount of gold
+/Script SILVER_PER_GOLD=0.01
+
+
+
+Fake guild-control
+/script GuildFrameControlButton:Enable();
+
+
+Enables all gray-buttons for fake-screens
+/run GetMouseFocus():Enable()
+
+
+Plays a dank music
+/script PlaySoundFile("Sound\\Music\\ZoneMusic\\DMF_L70ETC01.mp3")
+
+
+Says texture/frame name:
+/run print(GetMouseFocus():GetName())
+/run GameTooltip:SetScript("OnShow", function() DEFAULT_CHAT_FRAME:AddMessage("Tooltip owner:" .. (this:GetOwner() and this:GetOwner():GetName() or "none")) end)
+/script DEFAULT_CHAT_FRAME:AddMessage( GetMouseFocus():GetName() ); 
+
+
+Says the amount of rested XP:
+/script p="player";x=UnitXP(p);m=UnitXPMax(p);r=GetXPExhaustion();if -1==(r or -1)then t="No rest."else t="Rest: "..(math.floor(20*r/m+0.5)).." bubbles ("if r+x<m then t=t..r else t=t.."level +"..(r+x-m)end t=t.."XP)"end;DEFAULT_CHAT_FRAME:AddMessage(t)
+
+
+
+Says ID of ITEM, click on item, paste this macro:
+/script local infoType, info1, info2 = GetCursorInfo(); if infoType == "item" then DEFAULT_CHAT_FRAME:AddMessage( info1 ); end
+
+
+Says the trace of Items/spell which you click on:
+/script local type, id, book = GetCursorInfo();DEFAULT_CHAT_FRAME:AddMessage((type=="item") and GetItemIcon(id) or (type=="spell") and GetSpellTexture(id,book) or (type=="macro") and select(2,GetMacroInfo(id)))
+
+
+Says XP info:
+/run a=UnitXP("player") b=UnitXPMax("player") print(a.."/"..b.." ("..floor((a/b)*100).."%). "..b-a.." XP to go!")
+
+
+Says all equiped items and their level:
+/run t={}; for i=1,18 do if i~=4 then l=GetInventoryItemLink('player',i); if l then _,_,_,v=GetItemInfo(l); table.insert(t,{l=l,v=v}); end end end sort(t, function(a,b) return a.v>b.v end ) for i,v in pairs(t) do print(v.v..' '..v.l); end
+
+
+Says your zone, location, GPS X,Y coordinates:
+/script SetMapToCurrentZone() local x,y=GetPlayerMapPosition("player") DEFAULT_CHAT_FRAME:AddMessage(format("%s, %s: %.1f, %.1f",GetZoneText(),GetSubZoneText(),x*100,y*100))
+
+
+Info about guild you are in:
+/ginfo
+
+
+Says all emotes:
+/script for i = 1, 170, 1 do DoEmote(getglobal("EMOTE"..i.."_TOKEN")) end
+
+
+Sets maximum screenshot quality without BLIZZARD WATERMARK(illuminati confirmed) --> Default is "3"
+/console screenshotQuality 10
+
+Commands for different screenshot output formats:
+/console screenshotFormat TGA
+/console screenshotFormat JPG
+
+

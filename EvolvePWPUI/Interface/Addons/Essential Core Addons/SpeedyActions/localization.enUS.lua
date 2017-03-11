@@ -1,0 +1,41 @@
+local color = {
+	RED = "|cffff0000";
+	GREEN = "|cff00ff00";
+	BLUE = "|cff0000ff";
+	PURPLE = "|cff700090";
+	YELLOW = "|cffffff00";
+	ORANGE = "|cffff6d00";
+	GREY = "|cff808080";
+	GOLD = "|cffcfb52b";
+	WHITE = "|cffffffff";
+	NEON_BLUE = "|cff4d4dff";
+	END = "|r";
+}
+
+SpeedyActionsLocals = {
+	["Blacklist a new keybinding"] = "Blacklist a new keybinding",
+	["Blacklist keybindings"] = "Blacklist keybindings",
+	["Blacklisted keybindings"] = "Blacklisted keybindings",
+	["Cannot disable while you are in combat, drop combat and run '/speedyactions disable' again."] = "Cannot disable while you are in combat, drop combat and run '/speedyactions disable' again.",
+	["Click to remove blacklist on %s."] = "Click to remove blacklist on %s.",
+	["SpeedyActions"] = "SpeedyActions",
+	["Disable SpeedyActions"] = "Disable SpeedyActions",
+	["Disabled! Type /speedyactions enable to reenable the mod."] = "Disabled! Type /speedyactions enable to reenable the mod.",
+	["Disabling modules will require a UI reload for the changes to take effect."] = "Disabling modules will require a UI reload for the changes to take effect.",
+	["Enable %s"] = "Enable %s",
+	["Enabled! Actions will be sped up again."] = "Enabled! Actions will be sped up again.",
+	["General"] = "General",
+	["Handles loading BindPad keys into SpeedyActions, not necessary 100% of the time but you will have less issues if you keep this enabled."] = "Handles loading BindPad keys into SpeedyActions, not necessary 100% of the time but you will have less issues if you keep this enabled.",
+	["Help"] = "Help",
+	["If you do not want a key to be sped up, you can blacklist it here."] = "If you do not want a key to be sped up, you can blacklist it here.",
+	["Keeps Bartender4 actions sped up, also speeds up Bartender4 buttons that are not bound to a key."] = "Keeps Bartender4 actions sped up, also speeds up Bartender4 buttons that are not bound to a key.",
+	["Modules"] = "Modules",
+	["Speeds up Dominos action key bindings as well as auction buttons that are not bound to a key."] = "Speeds up Dominos action key bindings as well as auction buttons that are not bound to a key.",
+	["Speeds up click casting, making actions trigger on mouse down rather than on release."] = "Speeds up click casting, making actions trigger on mouse down rather than on release.",
+	["Speeds up clicking of LunarSphere actions as well as key bindings."] = "Speeds up clicking of LunarSphere actions as well as key bindings.",
+	["This lets you *temporarily* SpeedyActions, it will be reenabled automatically on relog or reload.\n\nUseful if you want to drag buttons around on your action bar."] = "This lets you *temporarily* SpeedyActions, it will be reenabled automatically on relog or reload.\n\nUseful if you want to drag buttons around on your action bar.",
+	["You do not have any keys blacklisted yet! Use the button above to add a new key to the blacklist."] = "You do not have any keys blacklisted yet! Use the button above to add a new key to the blacklist.",
+	["Click and then press the key you want to blacklist"] = "Click and then press the key you want to blacklist",
+	["Description"] = "Description",
+	["DescriptionText"] = color.GOLD.."SpeedyActions TBC"..color.END.." speeds up triggering actions such as items or spells by triggering them on key/mouse down rather than release.\n\n"..color.GOLD.."SpeedyActions TBC"..color.END.." is a modification of "..color.PURPLE.."Shadowed's SpeedyActions AddOn for WotLK"..color.END.." by humfras.\n\n"..color.GOLD.."SpeedyActions TBC"..color.END.." currently features the following AddOns:\n- Blizzard's default ActionBars\n- Bartender4\n- Bongos_AB (Bongos ActionBars)\n- Dominos\n- Lunarsphere\n"..color.GREY.."and"..color.END.."\n- Clique"
+}

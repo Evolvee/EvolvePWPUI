@@ -1,0 +1,3 @@
+This Interrupt Bar has custom timers... for example Psychic Scream of Shadowpriest...
+
+Be carefull with that.

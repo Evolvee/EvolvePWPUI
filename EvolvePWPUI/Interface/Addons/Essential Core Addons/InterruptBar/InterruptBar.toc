@@ -1,0 +1,9 @@
+## Interface: 20400
+## Title: Interrupt Bar
+## Notes: Tracks interrupts
+## Version: 1.14
+## Author: Kollektiv, Edited by Evolve
+## DefaultState: Enabled
+## SavedVariables: InterruptBarDB
+
+InterruptBar.lua

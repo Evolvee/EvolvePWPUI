@@ -1,0 +1,7 @@
+## Interface: 20400
+## Title: FocusFrame
+## Version: 2.3.6
+## Author: Tageshi
+## Notes: A movable frame like TargetFrame to show your focus.
+## SavedVariables: FocusFrameOptions
+FocusFrame.xml
