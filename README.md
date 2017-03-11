@@ -1,1 +1,1 @@
-![Image of UwotM8](http://i.imgur.com/6eurVir.png)
+![Image of UwotM8](http://i.imgur.com/wzgYLG6.png)
