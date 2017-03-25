@@ -107,16 +107,16 @@ AzCastBar_Config = {
 			1, -- [3]
 			1, -- [4]
 		},
-		["backdropIndent"] = 60,
+		["backdropBG"] = "Interface\\ChatFrame\\ChatFrameBackground",
 		["showTime"] = false,
 		["texture"] = "Interface\\Addons\\AzCastBar\\Textures\\test",
 		["enabled"] = true,
-		["backdropBG"] = "Interface\\ChatFrame\\ChatFrameBackground",
-		["bottom"] = 175,
+		["backdropIndent"] = 60,
 		["safeZone"] = false,
-		["fontSize"] = 29,
-		["fadeTime"] = 0.1000000014901161,
+		["bottom"] = 175,
 		["alpha"] = 1,
+		["fadeTime"] = 0.1000000014901161,
+		["showRank"] = false,
 		["width"] = 330,
 		["colBackdrop"] = {
 			0, -- [1]
@@ -131,7 +131,7 @@ AzCastBar_Config = {
 			0.5019607843137255, -- [3]
 			0, -- [4]
 		},
-		["showRank"] = false,
+		["fontSize"] = 29,
 		["height"] = 55,
 		["textAlign"] = "LEFT",
 		["colFont"] = {
@@ -147,61 +147,7 @@ AzCastBar_Config = {
 			0, -- [4]
 		},
 	},
-	["Pet"] = {
-		["fontFace"] = "Fonts\\FRIZQT__.TTF",
-		["left"] = 534.800048828125,
-		["colInterrupt"] = {
-			1, -- [1]
-			0.75, -- [2]
-			0.5, -- [3]
-			1, -- [4]
-		},
-		["showIcon"] = false,
-		["showLabel"] = false,
-		["showTime"] = false,
-		["texture"] = "Interface\\Addons\\AzCastBar\\Textures\\Waterline",
-		["enabled"] = false,
-		["backdropIndent"] = -3,
-		["colNormal"] = {
-			0.4, -- [1]
-			0.6, -- [2]
-			0.8, -- [3]
-			1, -- [4]
-		},
-		["bottom"] = 276.7555236816406,
-		["showRank"] = false,
-		["fadeTime"] = 0.6,
-		["alpha"] = 1,
-		["width"] = 300,
-		["fontSize"] = 12,
-		["fontFlags"] = "",
-		["colFailed"] = {
-			1, -- [1]
-			0.5, -- [2]
-			0.5, -- [3]
-			1, -- [4]
-		},
-		["colBackdrop"] = {
-			0.1, -- [1]
-			0.22, -- [2]
-			0.35, -- [3]
-			1, -- [4]
-		},
-		["height"] = 20,
-		["textAlign"] = "LEFT",
-		["colFont"] = {
-			1, -- [1]
-			1, -- [2]
-			1, -- [3]
-			1, -- [4]
-		},
-		["colBackground"] = {
-			1, -- [1]
-			1, -- [2]
-			1, -- [3]
-			1, -- [4]
-		},
-	},
+	["optionsBottom"] = 256.4889526367188,
 	["Focus"] = {
 		["fontFace"] = "Fonts\\FRIZQT__.TTF",
 		["left"] = 532.6666870117188,
@@ -224,24 +170,24 @@ AzCastBar_Config = {
 			1, -- [4]
 		},
 		["bottom"] = 218,
-		["showRank"] = false,
-		["fadeTime"] = 0.6,
 		["alpha"] = 1,
+		["fadeTime"] = 0.6,
+		["showRank"] = false,
 		["width"] = 300,
 		["fontSize"] = 12,
-		["fontFlags"] = "",
-		["colFailed"] = {
-			1, -- [1]
-			0.5, -- [2]
-			0.5, -- [3]
-			1, -- [4]
-		},
 		["colBackdrop"] = {
 			0.1, -- [1]
 			0.22, -- [2]
 			0.35, -- [3]
 			1, -- [4]
 		},
+		["colFailed"] = {
+			1, -- [1]
+			0.5, -- [2]
+			0.5, -- [3]
+			1, -- [4]
+		},
+		["fontFlags"] = "",
 		["height"] = 20,
 		["textAlign"] = "LEFT",
 		["colFont"] = {
@@ -279,24 +225,24 @@ AzCastBar_Config = {
 			1, -- [4]
 		},
 		["bottom"] = 246,
-		["showRank"] = false,
-		["fadeTime"] = 0.6,
 		["alpha"] = 1,
+		["fadeTime"] = 0.6,
+		["showRank"] = false,
 		["width"] = 300,
 		["fontSize"] = 12,
-		["fontFlags"] = "",
-		["colFailed"] = {
-			1, -- [1]
-			0.5, -- [2]
-			0.5, -- [3]
-			1, -- [4]
-		},
 		["colBackdrop"] = {
 			0.1, -- [1]
 			0.22, -- [2]
 			0.35, -- [3]
 			1, -- [4]
 		},
+		["colFailed"] = {
+			1, -- [1]
+			0.5, -- [2]
+			0.5, -- [3]
+			1, -- [4]
+		},
+		["fontFlags"] = "",
 		["height"] = 20,
 		["textAlign"] = "LEFT",
 		["colFont"] = {
@@ -312,6 +258,7 @@ AzCastBar_Config = {
 			1, -- [4]
 		},
 	},
+	["optionsLeft"] = 466.9558410644531,
 	["BGTimers"] = {
 		["fontSize"] = 12,
 		["left"] = 530.5333862304688,
@@ -354,6 +301,59 @@ AzCastBar_Config = {
 			1, -- [4]
 		},
 	},
-	["optionsLeft"] = 466.9558410644531,
-	["optionsBottom"] = 256.4889526367188,
+	["Pet"] = {
+		["fontFace"] = "Fonts\\FRIZQT__.TTF",
+		["left"] = 534.800048828125,
+		["colInterrupt"] = {
+			1, -- [1]
+			0.75, -- [2]
+			0.5, -- [3]
+			1, -- [4]
+		},
+		["showIcon"] = false,
+		["showLabel"] = false,
+		["showTime"] = false,
+		["texture"] = "Interface\\Addons\\AzCastBar\\Textures\\Waterline",
+		["enabled"] = false,
+		["backdropIndent"] = -3,
+		["colNormal"] = {
+			0.4, -- [1]
+			0.6, -- [2]
+			0.8, -- [3]
+			1, -- [4]
+		},
+		["bottom"] = 276.7555236816406,
+		["alpha"] = 1,
+		["fadeTime"] = 0.6,
+		["showRank"] = false,
+		["width"] = 300,
+		["fontSize"] = 12,
+		["colBackdrop"] = {
+			0.1, -- [1]
+			0.22, -- [2]
+			0.35, -- [3]
+			1, -- [4]
+		},
+		["colFailed"] = {
+			1, -- [1]
+			0.5, -- [2]
+			0.5, -- [3]
+			1, -- [4]
+		},
+		["fontFlags"] = "",
+		["height"] = 20,
+		["textAlign"] = "LEFT",
+		["colFont"] = {
+			1, -- [1]
+			1, -- [2]
+			1, -- [3]
+			1, -- [4]
+		},
+		["colBackground"] = {
+			1, -- [1]
+			1, -- [2]
+			1, -- [3]
+			1, -- [4]
+		},
+	},
 }
