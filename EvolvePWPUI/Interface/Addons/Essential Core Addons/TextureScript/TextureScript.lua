@@ -1033,8 +1033,3 @@ ChatFrame1:AddMessage("\124c00ee7ae9\124TInterface\\ChatFrame\\UI-ChatIcon-Blizz
 --position of minimap(remove to reset minimap position)
 MinimapCluster:ClearAllPoints();
 MinimapCluster:SetPoint("BOTTOMLEFT", 1186.333618164063, 595.0001831054688);
-
-
---improved error frame button hide
-IEFMinimapButton:SetAlpha(0)
-

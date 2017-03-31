@@ -1,6 +1,6 @@
 ## Interface: 30000
 ## Author: Evolve, Pyralis, Schaka
 ## Title: TextureScript
-## Notes: TOP KEK PWP UI 8/8 would install again
+## Notes: TOP KEK PWP UI 9/11 would install again
 
 TextureScript.lua
