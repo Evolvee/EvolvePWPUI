@@ -100,7 +100,7 @@ hooksecurefunc("HealthBar_OnValueChanged", function()
         colour(this, this.unit)
 end)
 
--- Disable combat text over player & pet frame
+-- Disable combat text spam over player & pet frame
 PlayerHitIndicator:SetText(nil)
 PlayerHitIndicator.SetText = function() end
 
@@ -1047,15 +1047,15 @@ g:SetScript("OnEvent", function()
                 end
                 if guildMoney > cost and CanGuildBankRepair() then
                     RepairAllItems(1)
-                    print(format("|cfff07100Repair cost covered by G-Bank: %.1fg|r", cost * 0.0001))
+                    ChatFrame1:AddMessage(format("|cfff07100Repair cost covered by G-Bank: %.1fg|r", cost * 0.0001))
                     return
                 end
             end
             if money > cost then
                 RepairAllItems()
-                print(format("|cffead000Repair cost: %.1fg|r", cost * 0.0001))
+                ChatFrame1:AddMessage(format("|cffead000Repair cost: %.1fg|r", cost * 0.0001))
             else
-                print("Not enough gold to cover the repair cost.")
+                ChatFrame1:AddMessage("Not enough gold to cover the repair cost.")
             end
         end
     end
