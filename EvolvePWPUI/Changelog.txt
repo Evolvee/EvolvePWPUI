@@ -25,3 +25,10 @@ Updated FocusFrame "RED FOCUS" circle.
 Updated ReadMe - Table of Contents
 
 If you want to update your UI with this version, you should download the UI and copy and paste whole Interface Folder and SavedVariables from scratch.
+
+--------------------------
+
+ALL CHANGES ARE NOW DESCRIBED ON GITHUB SINCE I RE-PACKED THIS UI INTO git-friendly FOLDERS...
+SEE "COMMITS" OR "RELEASES" FOR MORE INFO AND UPDATES.
+
+THIS CHANGELOG FILE IS NO LONGER BEING UPDATED.
