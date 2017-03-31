@@ -399,6 +399,16 @@ PartyMemberFrame4Name:SetAlpha(0)
 
 local f = CreateFrame("frame",nil, UIParent); f:SetScript("OnUpdate", CombatLogClearEntries);
 
+--TargetFrame castbar slight up-scaling
+
+TargetFrameSpellBar:SetScale(1.1)
+
+
+--FocusFrame castbar slight up-scaling
+
+FocusFrameSpellBar:SetScale(1.1)
+
+
 --github link on this UI project
 
 ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
