@@ -1028,7 +1028,7 @@ end
 
 --whisper on login informing this UI was properly loaded
 
-ChatFrame1:AddMessage("\124c00ee7ae9\124TInterface\\ChatFrame\\UI-ChatIcon-Blizz.blp:17:28\124t\124h[Evolve] whispers: PWP UI 2.2 Loaded\124h\124r")
+ChatFrame1:AddMessage("\124c00ff4555\124h[Evolve] yells: PWP UI 2.2 Loaded successfully!\124h\124r")
 
 --position of minimap(remove to reset minimap position)
 MinimapCluster:ClearAllPoints();
