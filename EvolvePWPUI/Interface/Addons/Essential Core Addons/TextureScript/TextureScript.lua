@@ -355,7 +355,6 @@ ActionBarUpButton:Hide()
 ActionBarDownButton:Hide()
 MainMenuBarPageNumber:SetAlpha(0)
 
-
 UIErrorsFrame:Hide()
 
 PlayerRestIcon:SetAlpha(0)
@@ -399,6 +398,7 @@ PartyMemberFrame4Name:SetAlpha(0)
 
 local f = CreateFrame("frame",nil, UIParent); f:SetScript("OnUpdate", CombatLogClearEntries);
 
+
 --TargetFrame castbar slight up-scaling
 
 TargetFrameSpellBar:SetScale(1.1)
@@ -407,11 +407,6 @@ TargetFrameSpellBar:SetScale(1.1)
 --FocusFrame castbar slight up-scaling
 
 FocusFrameSpellBar:SetScale(1.1)
-
-
---github link on this UI project
-
-ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
 
 
 --Action bar buttons are now bigger, better looking and also fixes spellbook/wep switch bugging of dark theme
@@ -1026,9 +1021,10 @@ function plated:UPDATE_BATTLEFIELD_SCORE()
 end
 
 
---whisper on login informing this UI was properly loaded
+--login informing this UI was properly loaded
+ChatFrame1:AddMessage("PWP UI 2.2 Loaded successfully!",255,255,0)
+ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
 
-ChatFrame1:AddMessage("\124c00ff4555\124h[Evolve] yells: PWP UI 2.2 Loaded successfully!\124h\124r")
 
 --position of minimap(remove to reset minimap position)
 MinimapCluster:ClearAllPoints();
