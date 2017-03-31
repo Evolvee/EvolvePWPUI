@@ -1065,6 +1065,14 @@ end)
 ChatFrame1:AddMessage("PWP UI 2.2 Loaded successfully!",255,255,0)
 ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
 
+--ADD EXTRA COMMANDS for Ready Check + GM ticket /rc and /gm
+
+SlashCmdList["READYCHECK"] = function() DoReadyCheck() end
+SLASH_READYCHECK1 = '/rc'
+
+SlashCmdList["TICKET"] = function() ToggleHelpFrame() end
+SLASH_TICKET1 = "/gm"
+
 
 --position of minimap(remove to reset minimap position)
 MinimapCluster:ClearAllPoints();
