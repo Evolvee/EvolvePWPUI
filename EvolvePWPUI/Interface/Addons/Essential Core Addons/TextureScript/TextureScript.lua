@@ -351,6 +351,9 @@ PlayerName:Hide()
 PetName:Hide()
 FocusFrameTitle:Hide()
 PlayerFrameGroupIndicator:SetScript("OnShow", PlayerFrameGroupIndicator.Hide)
+ActionBarUpButton:Hide()
+ActionBarDownButton:Hide()
+MainMenuBarPageNumber:SetAlpha(0)
 
 
 UIErrorsFrame:Hide()
