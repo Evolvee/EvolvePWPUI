@@ -369,7 +369,6 @@ PlayerStatusTexture:SetAlpha(0)
 PlayerMasterIcon:SetAlpha(0)
 
 
-
 FocusLevelText:SetAlpha(0)
 FocusLeaderIcon:SetAlpha(0)
 
@@ -1070,9 +1069,6 @@ SLASH_READYCHECK1 = '/rc'
 SlashCmdList["TICKET"] = function() ToggleHelpFrame() end
 SLASH_TICKET1 = "/gm"
 
---login informing this UI was properly loaded
-ChatFrame1:AddMessage("PWP UI 2.2 Loaded successfully!",255,255,0)
-ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
 
 --XP bar
 
@@ -1177,6 +1173,20 @@ ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
 	    end
     end)
 
+--login informing this UI was properly loaded
+ChatFrame1:AddMessage("PWP UI 2.2 Loaded successfully!",255,255,0)
+ChatFrame1:AddMessage("Regular updates at:",255,255,0)
+ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
+
+--increasing player-debuff size
+
+hooksecurefunc("BuffButton_Update", function()
+for i=1,32 do
+if _G["DebuffButton"..i] ~= nil then
+_G["DebuffButton"..i]:SetScale(1.23)
+end
+end
+end)
 
 --position of minimap(remove to reset minimap position)
 MinimapCluster:ClearAllPoints();
