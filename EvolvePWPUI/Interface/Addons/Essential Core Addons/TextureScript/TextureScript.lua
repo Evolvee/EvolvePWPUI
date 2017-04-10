@@ -393,6 +393,8 @@ PartyMemberFrame2Name:SetAlpha(0)
 PartyMemberFrame3Name:SetAlpha(0)
 PartyMemberFrame4Name:SetAlpha(0)
 
+ChatFrameMenuButton:Hide()
+
 --script preventing addons that are bound on combat log from bugging(automatically clearing combat log every frame--60fps=60x cleaned per 1 second)
 
 local f = CreateFrame("frame",nil, UIParent); f:SetScript("OnUpdate", CombatLogClearEntries);
@@ -1173,10 +1175,6 @@ SLASH_TICKET1 = "/gm"
 	    end
     end)
 
---login informing this UI was properly loaded
-ChatFrame1:AddMessage("PWP UI 2.2 Loaded successfully!",255,255,0)
-ChatFrame1:AddMessage("Regular updates at:",255,255,0)
-ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
 
 --increasing player-debuff size
 
@@ -1187,6 +1185,12 @@ _G["DebuffButton"..i]:SetScale(1.23)
 end
 end
 end)
+
+--login informing this UI was properly loaded
+ChatFrame1:AddMessage("PWP UI 2.2 Loaded successfully!",255,255,0)
+ChatFrame1:AddMessage("Regular updates at:",255,255,0)
+ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
+
 
 --position of minimap(remove to reset minimap position)
 MinimapCluster:ClearAllPoints();
