@@ -38,9 +38,12 @@ ACDFrame:SetScript("OnUpdate", function(self, elapse )
 		if ((math.floor(countdown) ~= math.floor(countdown - elapse)) and (math.floor(countdown - elapse) >= 0)) then
 			local str = tostring(math.floor(countdown - elapse));
 			
-			if (string.len(str) == 2) then			
+			if (math.floor(countdown - elapse) == 0) then
+				ACDNumTens:Hide();
+				ACDNumOnes:Hide();		
+				ACDNumOne:Hide();
+			elseif (string.len(str) == 2) then			
 				-- Display has 2 digits
-				
 				ACDNumTens:Show();
 				ACDNumOnes:Show();
 				
@@ -48,7 +51,6 @@ ACDFrame:SetScript("OnUpdate", function(self, elapse )
 				ACDNumOnes:SetTexture("Interface\\AddOns\\ArenaCountDown\\Artwork\\".. string.sub(str,2,2));
 			elseif (string.len(str) == 1) then		
 				-- Display has 1 digit
-				
 				ACDNumOne:Show();
 				ACDNumOne:SetTexture("Interface\\AddOns\\ArenaCountDown\\Artwork\\".. string.sub(str,0,1));				
 				ACDNumOnes:Hide();
