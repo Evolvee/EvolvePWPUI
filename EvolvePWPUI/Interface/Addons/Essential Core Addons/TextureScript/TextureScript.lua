@@ -1072,7 +1072,8 @@ SlashCmdList["TICKET"] = function() ToggleHelpFrame() end
 SLASH_TICKET1 = "/gm"
 
 
---XP bar
+--XP bar + reputation bar visual rework
+
 
  local BACKDROP = {  bgFile = [[Interface\Tooltips\UI-Tooltip-Background]],
                         insets = {left = -1, right = -1, top = -1, bottom = -1} }
