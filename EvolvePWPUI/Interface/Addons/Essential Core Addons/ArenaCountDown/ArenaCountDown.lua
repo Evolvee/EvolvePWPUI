@@ -19,12 +19,12 @@ ACDNumFrame:Show()
 local ACDNumTens = ACDNumFrame:CreateTexture("ACDNumTens", "HIGH")
 ACDNumTens:SetWidth(256)
 ACDNumTens:SetHeight(128)
-ACDNumTens:SetPoint("CENTER", ACDNumFrame, "CENTER", -64, 0)
+ACDNumTens:SetPoint("CENTER", ACDNumFrame, "CENTER", -48, 0)
 
 local ACDNumOnes = ACDNumFrame:CreateTexture("ACDNumOnes", "HIGH")
 ACDNumOnes:SetWidth(256)
 ACDNumOnes:SetHeight(128)
-ACDNumOnes:SetPoint("CENTER", ACDNumFrame, "CENTER", 64, 0)
+ACDNumOnes:SetPoint("CENTER", ACDNumFrame, "CENTER", 48, 0)
 
 local ACDNumOne = ACDNumFrame:CreateTexture("ACDNumOne", "HIGH")
 ACDNumOne:SetWidth(256)
@@ -49,12 +49,14 @@ ACDFrame:SetScript("OnUpdate", function(self, elapse )
 				
 				ACDNumTens:SetTexture("Interface\\AddOns\\ArenaCountDown\\Artwork\\".. string.sub(str,0,1));
 				ACDNumOnes:SetTexture("Interface\\AddOns\\ArenaCountDown\\Artwork\\".. string.sub(str,2,2));
+				ACDNumFrame:SetScale(0.7)
 			elseif (string.len(str) == 1) then		
 				-- Display has 1 digit
 				ACDNumOne:Show();
 				ACDNumOne:SetTexture("Interface\\AddOns\\ArenaCountDown\\Artwork\\".. string.sub(str,0,1));				
 				ACDNumOnes:Hide();
 				ACDNumTens:Hide();
+				ACDNumFrame:SetScale(1.0)
 			end
 		end
 		countdown = countdown - elapse;
