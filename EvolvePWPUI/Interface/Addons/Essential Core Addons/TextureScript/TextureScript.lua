@@ -1177,6 +1177,7 @@ SLASH_TICKET1 = "/gm"
     end)
 
 
+
 --increasing player-debuff size
 
 hooksecurefunc("BuffButton_Update", function()
@@ -1187,12 +1188,18 @@ end
 end
 end)
 
---login informing this UI was properly loaded
-ChatFrame1:AddMessage("PWP UI 2.2 Loaded successfully!",255,255,0)
-ChatFrame1:AddMessage("Regular updates at:",255,255,0)
-ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
-
 
 --position of minimap(remove to reset minimap position)
 MinimapCluster:ClearAllPoints();
 MinimapCluster:SetPoint("BOTTOMLEFT", 1186.333618164063, 595.0001831054688);
+
+--removing character "C" button image
+CharacterMicroButton:UnregisterEvent("UNIT_PORTRAIT_UPDATE")
+MicroButtonPortrait:SetTexture(nil)
+CharacterMicroButton:SetNormalTexture("Interface/BUTTONS/Custom Evo C panel");
+CharacterMicroButton:SetPushedTexture("Interface/BUTTONS/Custom Evo C panel");
+
+--login informing this UI was properly loaded
+ChatFrame1:AddMessage("PWP UI 2.2 Loaded successfully!",255,255,0)
+ChatFrame1:AddMessage("Regular updates at:",255,255,0)
+ChatFrame1:AddMessage("https://evolvee.github.io/EvolvePWPUI/",255,255,0)
