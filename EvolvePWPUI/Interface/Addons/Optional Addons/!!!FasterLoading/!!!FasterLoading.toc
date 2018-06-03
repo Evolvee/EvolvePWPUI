@@ -1,9 +1,0 @@
-## Interface: 20400
-## Title: FasterLoading
-## Author: Pyralis
-## Version: 1.0
-## Notes: Speed up loading by disabling vsync during it.
-## DefaultState: Enabled
-## LoadOnDemand: 0
-
-FasterLoading.lua
