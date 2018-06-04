@@ -1,2 +1,6 @@
 Default version of this addon has only Tremor Totem nameplate displayed.
-If you want to display more totem nameplates(magma/grounding etc), remove their name from the list of ["Shits"] table.
+If you want to display more totem nameplates(magma/grounding etc):
+
+1) Open TextureScript.lua file inside TextureScript addon folder,
+
+2) Remove their name from the list of ["Shits"] table.
