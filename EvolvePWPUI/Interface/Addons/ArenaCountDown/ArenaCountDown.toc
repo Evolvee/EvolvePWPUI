@@ -1,5 +1,0 @@
-## Interface: 20400
-## Title: ArenaCountDown
-## Author: Schaka
-## Version: 1.0
-ArenaCountDown.lua

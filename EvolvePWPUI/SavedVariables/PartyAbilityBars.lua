@@ -21,9 +21,9 @@ PABDB = {
 		},
 		["MAGE"] = {
 			["Counterspell"] = 24,
-			["Frost Nova"] = 21,
 			["Cold Snap"] = 384,
 			["Ice Block"] = 300,
+			["Frost Nova"] = 21,
 		},
 		["Orc"] = {
 		},
@@ -53,9 +53,8 @@ PABDB = {
 			["Spell Lock"] = 24,
 			["Death Coil"] = 120,
 		},
-		["ROGUE"] = {
-			["Blind"] = 90,
-			["Cloak of Shadows"] = 60,
+		["BloodElf"] = {
+			["Arcane Torrent"] = 120,
 		},
 		["Human"] = {
 		},
@@ -63,8 +62,10 @@ PABDB = {
 			["Mana Tide Totem"] = 300,
 			["Earth Shock"] = 6,
 		},
-		["BloodElf"] = {
-			["Arcane Torrent"] = 120,
+		["ROGUE"] = {
+			["Cloak of Shadows"] = 60,
+			["Blind"] = 90,
+			["Shadowstep"] = 30,
 		},
 	},
 	["lock"] = true,

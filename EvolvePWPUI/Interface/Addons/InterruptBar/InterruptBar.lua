@@ -7,7 +7,7 @@ local abilities = {}
 local order
 local band = bit.band
 
-local spellids = {[6552] = 10, [2139] = 24, [1766] = 10, [31224] = 60, [8643] = 20, [2094] = 90, [10890] = 23} 
+local spellids = {[19503] = 30,[6552] = 10, [2139] = 24, [1766] = 10, [31224] = 60, [8643] = 20, [2094] = 90, [10890] = 23} 
 for spellid,time in pairs(spellids) do
 	local name,_,spellicon = GetSpellInfo(spellid)	
 	abilities[name] = { icon = spellicon, duration = time }
@@ -16,6 +16,7 @@ end
 -----------------------------------------------------
 -- Edit this table to change the order
 -----------------------------------------------------
+-- 19503  Scatter Shot
 -- 6552  Pummel
 -- 2139  Counterspell
 -- 1766  Kick
@@ -27,7 +28,7 @@ end
 
 -----------------------------------------------------
 
-local order = {1766, 6552, 2139, 10890, 8643, 31224, 2094}
+local order = {19503, 1766, 6552, 2139, 10890, 8643, 31224, 2094}
 
 -----------------------------------------------------
 -----------------------------------------------------

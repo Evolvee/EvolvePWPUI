@@ -13,6 +13,7 @@ local Castbar = Gladdy:NewModule("Castbar", 70, {
     castBarFontSize = 12,
     castBarColor = {r = 1, g = 1, b = 0, a = 1},
     castBarBgColor = {r = 1, g = 1, b = 1, a = .3},
+    castBarGuesses = true,
 })
 
 function Castbar:Initialise()
@@ -203,20 +204,35 @@ end
 
 function Castbar:GetOptions()
     return {
+        castBarGuesses = option({
+            type = "toggle",
+            name = L["Castbar guesses on/off"],
+            desc = L["If disabled, castbars will stop as soon as you lose your 'unit', e.g. mouseover or your party targeting someone else."
+            .."\nDisable this, if you see castbars, even though the player isn't casting."],
+            order = 2,
+        }),
         castBarHeight = option({
             type = "range",
             name = L["Bar height"],
             desc = L["Height of the bar"],
-            order = 2,
+            order = 3,
             min = 0,
             max = 50,
             step = 1,
+        }),
+        castBarFontSize = option({
+            type = "range",
+            name = L["Font size"],
+            desc = L["Size of the text"],
+            order = 4,
+            min = 1,
+            max = 20,
         }),
         castBarTexture = option({
             type = "select",
             name = L["Bar texture"],
             desc = L["Texture of the bar"],
-            order = 3,
+            order = 5,
             dialogControl = "LSM30_Statusbar",
             values = AceGUIWidgetLSMlists.statusbar,
         }),
@@ -224,29 +240,21 @@ function Castbar:GetOptions()
             type = "color",
             name = L["Font color"],
             desc = L["Color of the text"],
-            order = 4,
+            order = 6,
             hasAlpha = true,
-        }),
-        castBarFontSize = option({
-            type = "range",
-            name = L["Font size"],
-            desc = L["Size of the text"],
-            order = 1,
-            min = 1,
-            max = 20,
         }),
         castBarColor = colorOption({
             type = "color",
             name = L["Bar color"],
             desc = L["Color of the cast bar"],
-            order = 6,
+            order = 7,
             hasAlpha = true,
         }),
         castBarBgColor = colorOption({
             type = "color",
             name = L["Background color"],
             desc = L["Color of the cast bar background"],
-            order = 7,
+            order = 8,
             hasAlpha = true,
         }),
     }

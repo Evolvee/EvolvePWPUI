@@ -1,8 +1,8 @@
 ## Interface: 20400
 ## Title: Gladdy!
 ## Notes: The most powerful arena AddOn for WoW 2.4.3
-## Author: Mikhail "miraage" Osher
-## X-Email: miraage.wow@gmail.com
+## Author: Schaka
+## X-Email: schakaqt@gmail.com
 ## SavedVariables: GladdyXZ
 
 embeds.xml
@@ -28,3 +28,4 @@ Modules\Trinket.lua
 Modules\Cooldowns.lua
 Modules\TrinketTracker.lua
 Modules\ArenaIdentify.lua
+Modules\ArenaCountDown.lua

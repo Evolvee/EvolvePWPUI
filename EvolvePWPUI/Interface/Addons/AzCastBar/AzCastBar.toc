@@ -1,8 +1,0 @@
-## Interface: 20400
-## Title: AzCastBar
-## Author: Evolve, Ryn (Earthen Ring EU)
-## Notes: Casting Bar Mod
-## SavedVariablesPerCharacter: AzCastBar_Config
-Core.lua
-Plugins\CastBar.lua
-Plugins\Mirror.lua

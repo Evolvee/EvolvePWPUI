@@ -4,14 +4,7 @@ local WorldFrame = WorldFrame
 local select = select
 local pairs = pairs
 
-local function log(...)
-	local text = ""
-	for i = 1, select("#", ...) do
-		text = text .. " " .. tostring(select(i, ...))
-	end
-	DEFAULT_CHAT_FRAME:AddMessage(text)
-end
-
+-- TODO: this needs channeling spells again
 local Table = {
 	["Nameplates"] = {},
 	["CheckButtons"] = {

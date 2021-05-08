@@ -47,10 +47,9 @@ LoseControlDB = {
 	},
 	["tracking"] = {
 		["Immune"] = 1,
-		["CC"] = true,
+		["CC"] = 1,
 		["Snare"] = 1,
-		["Silence"] = true,
+		["Silence"] = 1,
 		["Root"] = 1,
-		["Disarm"] = true,
 	},
 }

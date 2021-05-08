@@ -7,8 +7,8 @@ ImprovedErrorSettings = {
 	["alwaysShow"] = false,
 	["stackTraceCapture"] = false,
 	["blinkNotification"] = true,
-	["displayCount"] = true,
-	["displayOnError"] = false,
 	["debugCapture"] = false,
+	["displayOnError"] = false,
+	["displayCount"] = true,
 	["XMLDebug"] = 0,
 }

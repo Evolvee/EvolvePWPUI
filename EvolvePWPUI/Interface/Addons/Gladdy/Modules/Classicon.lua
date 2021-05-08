@@ -19,9 +19,9 @@ function Classicon:CreateFrame(unit)
     local classIcon = Gladdy.buttons[unit]:CreateTexture(nil, "ARTWORK")
     classIcon:ClearAllPoints()
     if( Gladdy.db.classIconPos == "RIGHT" ) then
-	    classIcon:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPRIGHT", 0, 0)
+	    classIcon:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPRIGHT", 2, 0)
 	else
-		classIcon:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPLEFT", -0, 0)    	
+		classIcon:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPLEFT", -2, 0)    	
     end
     
     self.frames[unit] = classIcon
@@ -37,9 +37,9 @@ function Classicon:UpdateFrame(unit)
     classIcon:SetHeight(iconSize + 1)
     
     if( Gladdy.db.classIconPos == "RIGHT" ) then
-	    classIcon:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPRIGHT", 0, 0)
+	    classIcon:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPRIGHT", 2, 0)
 	else
-		classIcon:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPLEFT", -0, 0)    	
+		classIcon:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPLEFT", -2, 0)    	
     end
 end
 
@@ -93,6 +93,6 @@ function Classicon:ENEMY_SPOTTED(unit)
     local classIcon = self.frames[unit]
     if (not classIcon) then return end
 
-    classIcon:SetTexture("Interface\\Addons\\Gladdy\\UI-CharacterCreate-Classes")
+    classIcon:SetTexture("Interface\\Glues\\CharacterCreate\\UI-CharacterCreate-Classes")
     classIcon:SetTexCoord(unpack(CLASS_BUTTONS[Gladdy.buttons[unit].class]))
 end

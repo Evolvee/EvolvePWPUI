@@ -1,0 +1,4 @@
+
+BuffLibDB = {
+	["sync"] = true,
+}

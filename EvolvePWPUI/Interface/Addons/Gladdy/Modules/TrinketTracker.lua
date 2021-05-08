@@ -474,6 +474,18 @@ function TrinketTracker:UpdateTimer(destGUID, spellName, timeLeft, duration)
 	end
 end
 
+function TrinketTracker:CHAT_MSG_ADDON(prefix, message, channel, sender)
+	if prefix == "BuffLib" and sender ~= UnitName("player") then
+		local guid, name, duration, timeLeft = strsplit(",", message)
+
+		if guid == UnitGUID("player") then return end
+
+		if not self.abilities[name] then return end
+
+		self:UpdateTimer(guid, name, timeLeft, duration)
+	end
+end
+
 function TrinketTracker:PLAYER_LOGIN(...)
 	self.cdFrames = { }
 	self.trinketFrames = { }
@@ -529,6 +541,7 @@ function TrinketTracker:PLAYER_ENTERING_WORLD(...)
 	self:RegisterEvent("UNIT_AURA")
 	self:RegisterEvent("PLAYER_TARGET_CHANGED")
 	self:RegisterEvent("PLAYER_FOCUS_CHANGED")
+	self:RegisterEvent("CHAT_MSG_ADDON")
 
 end
 

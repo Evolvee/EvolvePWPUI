@@ -1,0 +1,50 @@
+<Bindings>
+	<Binding name="CLICK ExtraBar1Button1:LeftButton" header="ExtraBar1" />
+	<Binding name="CLICK ExtraBar1Button2:LeftButton" />
+	<Binding name="CLICK ExtraBar1Button3:LeftButton" />
+	<Binding name="CLICK ExtraBar1Button4:LeftButton" />
+	<Binding name="CLICK ExtraBar1Button5:LeftButton" />
+	<Binding name="CLICK ExtraBar1Button6:LeftButton" />
+	<Binding name="CLICK ExtraBar1Button7:LeftButton" />
+	<Binding name="CLICK ExtraBar1Button8:LeftButton" />
+	<Binding name="CLICK ExtraBar1Button9:LeftButton" />
+	<Binding name="CLICK ExtraBar1Button10:LeftButton" />
+	<Binding name="CLICK ExtraBar1Button11:LeftButton" />
+	<Binding name="CLICK ExtraBar1Button12:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button1:LeftButton" header="ExtraBar2" />
+	<Binding name="CLICK ExtraBar2Button2:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button3:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button4:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button5:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button6:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button7:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button8:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button9:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button10:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button11:LeftButton" />
+	<Binding name="CLICK ExtraBar2Button12:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button1:LeftButton" header="ExtraBar3" />
+	<Binding name="CLICK ExtraBar3Button2:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button3:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button4:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button5:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button6:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button7:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button8:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button9:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button10:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button11:LeftButton" />
+	<Binding name="CLICK ExtraBar3Button12:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button1:LeftButton" header="ExtraBar4" />
+	<Binding name="CLICK ExtraBar4Button2:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button3:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button4:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button5:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button6:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button7:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button8:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button9:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button10:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button11:LeftButton" />
+	<Binding name="CLICK ExtraBar4Button12:LeftButton" />
+</Bindings>

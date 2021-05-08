@@ -1,0 +1,12 @@
+
+GladdyDB = {
+	["profileKeys"] = {
+		["Evolve - Arena Tournament TBC(New Core)"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["y"] = 595.0000610351563,
+			["x"] = 242.9999847412109,
+		},
+	},
+}

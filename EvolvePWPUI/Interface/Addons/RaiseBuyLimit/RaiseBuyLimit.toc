@@ -1,9 +1,0 @@
-## Interface: 20400
-## Title: RaiseBuyLimit
-## Author: Pyralis
-## Version: 1.0
-## Notes: Raises the limit of how many of an item you can buy at once, even for items that don't stack.
-## DefaultState: Enabled
-## LoadOnDemand: 0
-
-RaiseBuyLimit.lua

@@ -1,12 +1,12 @@
 
 InterruptBarDB = {
-	["scale"] = 1.5,
+	["scale"] = 1.38,
+	["lock"] = true,
+	["hidden"] = true,
 	["Position"] = {
-		["yOfs"] = -103.4872894287109,
-		["xOfs"] = -90.54801177978516,
+		["yOfs"] = -121.8282699584961,
+		["xOfs"] = -120.3644409179688,
 		["point"] = "TOPRIGHT",
 		["relativePoint"] = "TOPRIGHT",
 	},
-	["hidden"] = true,
-	["lock"] = true,
 }

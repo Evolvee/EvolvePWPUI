@@ -13,10 +13,13 @@ TO DO:
 ]]
 
 local Gladdy = LibStub("Gladdy")
+local L = Gladdy.L
 local ArenaIdentify = Gladdy:NewModule("ArenaIdentify", nil, {
     scanTable = {},
     guidsByName = {},
+	arenaIdentifyEnabled = true,
 })
+
 function ArenaIdentify:OnEvent(event, ...) -- functions created in "object:method"-style have an implicit first parameter of "self", which points to object
 	self[event](self, ...) -- route event parameters to LoseControl:event methods
 end
@@ -25,18 +28,21 @@ ArenaIdentify:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 ArenaIdentify:RegisterEvent("PLAYER_ENTERING_WORLD")
 
 local instanceType, bracket
-local alreadyLoaded = {}
 local alreadyFound = {}
 local alreadySaved = {}
 
 function ArenaIdentify:GuidInParty(guid)
-	local inParty = 0
-	for i=0, GetNumPartyMembers() do
+	for i=1, GetNumPartyMembers() do
 		if UnitGUID("party"..i) == guid then
-			inParty = 1
+			return 1;
 		end
 	end
-	return inParty
+	for i=1, GetNumRaidMembers() do
+		if UnitGUID("raid"..i) == guid then
+			return 1;
+		end
+	end
+	return 0
 end
 
 
@@ -47,6 +53,37 @@ function ArenaIdentify:Initialise()
 	if not Gladdy.db.guidsByName[GetRealmName()] then
 		Gladdy.db.guidsByName[GetRealmName()] = {}
 	end
+end
+
+local function option(params)
+	local defaults = {
+		get = function(info)
+			local key = info.arg or info[#info]
+			return Gladdy.dbi.profile[key]
+		end,
+		set = function(info, value)
+			local key = info.arg or info[#info]
+			Gladdy.dbi.profile[key] = value
+			Gladdy:UpdateFrame()
+		end,
+	}
+
+	for k, v in pairs(params) do
+		defaults[k] = v
+	end
+
+	return defaults
+end
+
+function ArenaIdentify:GetOptions()
+	return {
+		arenaIdentifyEnabled = option({
+			type = "toggle",
+			name = L["Turn option to automatically discover enemies on/off"],
+			desc = L["Turn this off if you experience any issues with enemies showing in Gladdy that don't exist"],
+			order = 2,
+		}),
+	}
 end
 
 function ArenaIdentify:PLAYER_ENTERING_WORLD()
@@ -139,6 +176,12 @@ end
 -- Are we inside an arena?
 local timeElapsed = 0
 function ArenaIdentify:ZONE_CHANGED_NEW_AREA()
+
+	if not Gladdy.db.arenaIdentifyEnabled then
+		self:UnregisterAllEvents()
+		return
+	end
+
 	local type = select(2, IsInInstance())
 	-- Inside an arena, but wasn't already
 	if( type == "arena" and type ~= instanceType --[[and select(2, IsActiveBattlefieldArena())]] ) then

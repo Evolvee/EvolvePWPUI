@@ -42,6 +42,7 @@ function Healthbar:CreateFrame(unit)
     	healthBar.nameText:Hide()
     else
     	healthBar.nameText:SetFont(Gladdy.LSM:Fetch("font"), Gladdy.db.healthBarFontSize)
+    	healthBar.nameText:Show()
     end
     healthBar.nameText:SetTextColor(Gladdy.db.healthBarFontColor.r, Gladdy.db.healthBarFontColor.g, Gladdy.db.healthBarFontColor.b, Gladdy.db.healthBarFontColor.a)
     healthBar.nameText:SetShadowOffset(1, -1)
@@ -55,6 +56,7 @@ function Healthbar:CreateFrame(unit)
     	healthBar.healthText:Hide()
     else
     	healthBar.healthText:SetFont(Gladdy.LSM:Fetch("font"), Gladdy.db.healthBarFontSize)
+    	healthBar.healthText:Hide()
     end	
     healthBar.healthText:SetTextColor(Gladdy.db.healthBarFontColor.r, Gladdy.db.healthBarFontColor.g, Gladdy.db.healthBarFontColor.b, Gladdy.db.healthBarFontColor.a)
     healthBar.healthText:SetShadowOffset(1, -1)
@@ -86,7 +88,9 @@ function Healthbar:UpdateFrame(unit)
 	    healthBar.healthText:Hide()
 	else
 	    healthBar.nameText:SetFont(Gladdy.LSM:Fetch("font"), Gladdy.db.healthBarFontSize)
+	    healthBar.nameText:Show()
 	    healthBar.healthText:SetFont(Gladdy.LSM:Fetch("font"), Gladdy.db.healthBarFontSize)
+	    healthBar.healthText:Show()
     end
     healthBar.nameText:SetTextColor(Gladdy.db.healthBarFontColor.r, Gladdy.db.healthBarFontColor.g, Gladdy.db.healthBarFontColor.b, Gladdy.db.healthBarFontColor.a)
     healthBar.healthText:SetTextColor(Gladdy.db.healthBarFontColor.r, Gladdy.db.healthBarFontColor.g, Gladdy.db.healthBarFontColor.b, Gladdy.db.healthBarFontColor.a)

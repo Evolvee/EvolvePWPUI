@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title: Alternate Buttons Template
+## Notes: Used by other addons to provide additional buttons in the user interface
+## Version: 0.7.4
+## Author: Massiner of Nathrezim
+AlternateButtonTemplate.xml

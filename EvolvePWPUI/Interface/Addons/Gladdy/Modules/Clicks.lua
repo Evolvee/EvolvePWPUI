@@ -29,11 +29,31 @@ BINDING_NAME_GLADDYBUTTON2_LEFT = L["Left Click Enemy 2"]
 BINDING_NAME_GLADDYBUTTON3_LEFT = L["Left Click Enemy 3"]
 BINDING_NAME_GLADDYBUTTON4_LEFT = L["Left Click Enemy 4"]
 BINDING_NAME_GLADDYBUTTON5_LEFT = L["Left Click Enemy 5"]
+
 BINDING_NAME_GLADDYBUTTON1_RIGHT = L["Right Click Enemy 1"]
 BINDING_NAME_GLADDYBUTTON2_RIGHT = L["Right Click Enemy 2"]
 BINDING_NAME_GLADDYBUTTON3_RIGHT = L["Right Click Enemy 3"]
 BINDING_NAME_GLADDYBUTTON4_RIGHT = L["Right Click Enemy 4"]
 BINDING_NAME_GLADDYBUTTON5_RIGHT = L["Right Click Enemy 5"]
+
+BINDING_NAME_GLADDYBUTTON1_MIDDLE = L["Middle Click Enemy 1"]
+BINDING_NAME_GLADDYBUTTON2_MIDDLE = L["Middle Click Enemy 2"]
+BINDING_NAME_GLADDYBUTTON3_MIDDLE = L["Middle Click Enemy 3"]
+BINDING_NAME_GLADDYBUTTON4_MIDDLE = L["Middle Click Enemy 4"]
+BINDING_NAME_GLADDYBUTTON5_MIDDLE = L["Middle Click Enemy 5"]
+
+BINDING_NAME_GLADDYBUTTON1_BUTTON4 = L["Button4 Click Enemy 1"]
+BINDING_NAME_GLADDYBUTTON2_BUTTON4 = L["Button4 Click Enemy 2"]
+BINDING_NAME_GLADDYBUTTON3_BUTTON4 = L["Button4 Click Enemy 3"]
+BINDING_NAME_GLADDYBUTTON4_BUTTON4 = L["Button4 Click Enemy 4"]
+BINDING_NAME_GLADDYBUTTON5_BUTTON4 = L["Button4 Click Enemy 5"]
+
+BINDING_NAME_GLADDYBUTTON1_BUTTON5 = L["Button5 Click Enemy 1"]
+BINDING_NAME_GLADDYBUTTON2_BUTTON5 = L["Button5 Click Enemy 2"]
+BINDING_NAME_GLADDYBUTTON3_BUTTON5 = L["Button5 Click Enemy 3"]
+BINDING_NAME_GLADDYBUTTON4_BUTTON5 = L["Button5 Click Enemy 4"]
+BINDING_NAME_GLADDYBUTTON5_BUTTON5 = L["Button5 Click Enemy 5"]
+
 BINDING_NAME_GLADDYTRINKET1 = L["Trinket Used Enemy 1"]
 BINDING_NAME_GLADDYTRINKET2 = L["Trinket Used Enemy 2"]
 BINDING_NAME_GLADDYTRINKET3 = L["Trinket Used Enemy 3"]
@@ -62,6 +82,9 @@ function Clicks:JOINED_ARENA()
     for k, v in pairs(Gladdy.buttons) do
         local left = GetBindingKey(("GLADDYBUTTON%d_LEFT"):format(v.id))
         local right = GetBindingKey(("GLADDYBUTTON%d_RIGHT"):format(v.id))
+        local middle = GetBindingKey(("GLADDYBUTTON%d_MIDDLE"):format(v.id))
+        local button4 = GetBindingKey(("GLADDYBUTTON%d_BUTTON4"):format(v.id))
+        local button5 = GetBindingKey(("GLADDYBUTTON%d_BUTTON5"):format(v.id))
 		local key = GetBindingKey("GLADDYTRINKET" .. v.id)
 		
 		ClearOverrideBindings(v.trinketButton)
@@ -73,6 +96,18 @@ function Clicks:JOINED_ARENA()
 
         if (right) then
             SetOverrideBindingClick(v.secure, false, right, v.secure:GetName(), "RightButton")
+        end
+
+        if (middle) then
+            SetOverrideBindingClick(v.secure, false, middle, v.secure:GetName(), "MiddleButton")
+        end
+
+        if (button4) then
+            SetOverrideBindingClick(v.secure, false, button4, v.secure:GetName(), "Button4")
+        end
+
+        if (button5) then
+            SetOverrideBindingClick(v.secure, false, button5, v.secure:GetName(), "Button5")
         end
 		
 		if (key) then

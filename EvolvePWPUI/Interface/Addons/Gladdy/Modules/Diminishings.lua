@@ -2,6 +2,8 @@ local max = math.max
 local select = select
 local pairs = pairs
 
+local drDuration = 18
+
 local GetSpellInfo = GetSpellInfo
 local CreateFrame = CreateFrame
 local GetTime = GetTime
@@ -199,10 +201,6 @@ function Diminishings:Test(unit)
     end
 end
 
-function testdr()
-	Diminishings:Fade("arena1", GetSpellInfo(118));
-end
-
 function Diminishings:Fade(unit, spell)
     local drFrame = self.frames[unit]
     local dr = self.spells[spell]
@@ -212,7 +210,7 @@ function Diminishings:Fade(unit, spell)
         local icon = drFrame["icon" .. i]
         if (not icon.active or (icon.dr and icon.dr == dr)) then
             icon.dr = dr
-            icon.timeLeft = 15
+            icon.timeLeft = drDuration
             icon.texture:SetTexture(self.icons[spell])
             icon.active = true
             self:Positionate(unit)

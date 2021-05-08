@@ -53,9 +53,9 @@ function Trinket:UpdateFrame(unit)
 
     trinket:ClearAllPoints()
     if( Gladdy.db.classIconPos == "LEFT" ) then
-	    trinket:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPRIGHT", 0, 0)
+	    trinket:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPRIGHT", 2, 0)
 	else
-		trinket:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPLEFT", -0, 0)    	
+		trinket:SetPoint("TOPLEFT", Gladdy.buttons[unit], "TOPLEFT", -2, 0)    	
     end
     trinket.cooldown:ClearAllPoints()
     trinket.cooldown:SetAllPoints(trinket)
